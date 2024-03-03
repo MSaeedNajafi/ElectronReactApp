@@ -1,0 +1,15 @@
+.container {
+    display: flex;
+    align-items: center;
+    gap:5px;
+}   
+
+.logo {
+    height: 17px;
+    width: 125px;
+}
+
+.icon{
+    Width:32px;
+    Height:32px;
+}

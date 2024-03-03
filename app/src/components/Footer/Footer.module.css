@@ -1,0 +1,40 @@
+.footerContainer{
+    background-color: black;
+    padding: 20px 100px;
+}
+
+.sitemapContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.header {
+    font-weight: bold;
+    color: white;
+}
+
+.social {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.copyRight {
+    font-size: x-small;
+    color: grey;
+}
+
+dt {
+    padding: 5px 0;
+}
+
+dd {
+    color: white;
+    font-size: small;
+    padding: 10px 0;
+}
+
+section {
+    margin: 0 10px;
+}

@@ -21,3 +21,15 @@ dt, dd {
   margin: 0;
   padding: 0;
 }
+
+@font-face {
+ font-family: "GTwalsheimRegular";
+ src: local("GTwalsheimRegular"),
+  url("./assets/fonts/GTWalsheimPro/gt-walsheim-regular-web.ttf") format("truetype");
+}
+
+@font-face {
+ font-family: "GTwalsheimMedium";
+ src: local("GTwalsheimMedium"),
+  url("./assets/fonts/GTWalsheimPro/gt-walsheim-medium-web.ttf") format("truetype");
+}

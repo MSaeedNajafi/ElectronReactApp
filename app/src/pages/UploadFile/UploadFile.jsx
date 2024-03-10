@@ -2,34 +2,12 @@ import React, { useState } from "react";
 import Tesseract from "tesseract.js";
 
 const UploadFile = () => {
-  // const [pdfFile, setPdfFile] = useState(null);
-  // const [viewPdf, setViewPdf] = useState(null);
-  // const [pdfFileError, setPdfFileError] = useState("");
   const [image, setImage] = useState(null);
-  const [imagePath, setImagePath] = useState("");
   const [text, setText] = useState("");
 
-  // const fileType = ["application/pdf"];
   const handlePdfFileChange = (e) => {
-    setImagePath(URL.createObjectURL(e.target.files[0]));
     const file = e.target.files[0];
     setImage(file);
-    // let selectedFile = e.target.files[0];
-    // if (selectedFile) {
-    //   if (selectedFile && fileType.includes(selectedFile.type)) {
-    //     let reader = new FileReader();
-    //     reader.readAsDataURL(selectedFile);
-    //     reader.onloadend = (e) => {
-    //       setPdfFile(e.target.result);
-    //       setPdfFileError("");
-    //     };
-    //   } else {
-    //     setPdfFile(null);
-    //     setPdfFileError("Please select valid pdf file");
-    //   }
-    // } else {
-    //   console.log("select your file");
-    // }
   };
 
   const performOCR = async () => {
@@ -42,8 +20,8 @@ const UploadFile = () => {
       data: { text },
     } = await Tesseract.recognize(
       image,
-      "eng", // Language - you can change it based on your requirements
-      { logger: (m) => console.log(m) } // Optional logger
+      "eng",
+      { logger: (m) => console.log(m) } 
     );
     setText(text);
   };

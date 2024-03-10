@@ -12,7 +12,10 @@ export const Layout = () => {
   return (
     <div>
       <div className={styles.navBar}>
-        <Logo />
+        <div className={styles.logo}>
+          <Logo />
+        </div>
+
         <ul>
           <div className={styles.nav}>
             <li>
@@ -83,7 +86,7 @@ export const Layout = () => {
               {isLinkActive("/support") && <div className={styles.indicator} />}
             </li>
           </div>
-          <div>
+          <div className={styles.webtoolContainer}>
             <li>
               <NavLink
                 to="/webtool"

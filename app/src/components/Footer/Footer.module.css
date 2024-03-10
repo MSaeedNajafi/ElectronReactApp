@@ -1,6 +1,6 @@
 .footerContainer{
     background-color: black;
-    padding: 20px 100px;
+    padding: 20px 175px;
 }
 
 .sitemapContainer {
@@ -23,13 +23,16 @@
 .copyRight {
     font-size: x-small;
     color: grey;
+    /* font-family: "GTwalsheimMedium"; */
 }
 
 dt {
     padding: 5px 0;
+    /* font-family: "GTwalsheimMedium"; */
 }
 
 dd {
+    /* font-family: "GTwalsheimMedium"; */
     color: white;
     font-size: small;
     padding: 10px 0;

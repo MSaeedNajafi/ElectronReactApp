@@ -3,6 +3,10 @@
     color: #826CFF;
 }
 
+.logo {
+  padding-left: 140px;
+}
+
 /* .inActive {
     color: white;
     size: 18px;
@@ -28,6 +32,11 @@
 .nav {
   gap: 32px;
   display: flex;
+}
+
+.webtoolContainer {
+  display: flex;
+  gap: 4px
 }
 
 ul {

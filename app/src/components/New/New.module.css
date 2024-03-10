@@ -1,0 +1,18 @@
+.text {
+    line-height: 14.4px;
+    font-size: 12px;
+    font-weight: 700;
+    font-family: "GTwalsheimMedium";
+    color: #000000;
+}
+
+.frame {
+    width: 52px;
+    height: 24px;
+    top: -5px;
+    background-color: #FF0000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}

@@ -1,14 +1,20 @@
 .active {
+    margin-top: 4px;
     color: #826CFF;
-    border-bottom: 4px solid #826CFF;
-    padding-bottom: 16px;
 }
 
-.inActive {
-    font-weight: 500; 
+/* .inActive {
     color: white;
     size: 18px;
     line-height: 21px;
+} */
+
+.indicator {
+    height: 4px;
+    border-radius: 2px;
+    background-color: #816CFF;
+    position: relative;
+    top: 20px;
 }
 
 .navBar {
@@ -17,6 +23,11 @@
     flex-direction: row;
     height: 80px;
     padding-right: 154px;
+}
+
+.nav {
+  gap: 32px;
+  display: flex;
 }
 
 ul {
@@ -30,12 +41,18 @@ ul {
 }
 
 li {
-  display: inline; 
+  display: inline-flex; 
   /* margin-right: 10px; */
   text-decoration: none; 
   font-family: "GTwalsheimMedium";
+  font-size: 18px;
+  line-height: 21.6px;
+  flex-direction: column;
+  align-self: center;
 }
 
 a {
     text-decoration: none;
+    /* align-self: center; */
+    color: white
 }

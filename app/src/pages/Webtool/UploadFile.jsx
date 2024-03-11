@@ -17,8 +17,16 @@ const UploadFile = () => {
   }, [image]);
 
   const handlePdfFileChange = (e) => {
+    
     const file = e.target.files[0];
-    setImage(file);
+
+    if (file.type === "application/pdf") {
+      console.log('you uploaded a pdf')
+    }
+    else {
+      setImage(file);
+    }
+
   };
 
   const performOCR = async () => {

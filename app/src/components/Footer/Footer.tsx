@@ -1,6 +1,11 @@
-import React from 'react'
+import React from "react";
 import styles from "./Footer.module.css";
-import Logo from '../Logo/Logo';
+import Logo from "../Logo/Logo";
+import FB from "../../assets/icons/facebook.png";
+import LI from "../../assets/icons/linkedin.png";
+import Play from "../../assets/icons/play.png";
+import TT from "../../assets/icons/twitter.png";
+
 const SiteMap = () => {
   return (
     <div className={styles.sitemapContainer}>
@@ -41,11 +46,28 @@ const SiteMap = () => {
       </section>
     </div>
   );
-}
+};
 
 const SocialIcons = () => {
-  return <dd>Social icons</dd>
-}
+  return (
+    <section >
+      <dl className={styles.socialIconsContainer}>
+        <dd>
+          <img src={TT} alt="" className={styles.socialIcons} />
+        </dd>
+        <dd>
+          <img src={FB} alt="" className={styles.socialIcons} />
+        </dd>
+        <dd>
+          <img src={LI} alt="" className={styles.socialIcons} />
+        </dd>
+        <dd>
+          <img src={Play} alt="" className={styles.socialIcons} />
+        </dd>
+      </dl>
+    </section>
+  );
+};
 
 const Footer = () => {
   return (
@@ -59,9 +81,13 @@ const Footer = () => {
           <SocialIcons />
         </div>
       </div>
-      <div><p className={styles.copyRight}>Copyright @ Envision 2022. All rights reserved.</p></div>
+      <div>
+        <p className={styles.copyRight}>
+          Copyright @ Envision 2022. All rights reserved.
+        </p>
+      </div>
     </div>
   );
-}
+};
 
-export default Footer
+export default Footer;

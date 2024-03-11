@@ -1,0 +1,122 @@
+.container {
+    padding: 90px 60px;
+}
+
+.input {
+    display: none;
+}
+
+.uploadBtn {
+    background-color: #000000;
+    padding: 12px 40px;
+    border-radius: 50px;
+}
+
+.uploadBtnText{
+    color: white;
+}
+
+.uploadContent{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    gap: 26px;
+    padding-top: 123px;
+    padding-bottom: 123px;
+}
+
+.headerTitle {
+    font-size: 44px;
+    font-weight: 700;
+    line-height: 52.8px
+}
+
+.text {
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 35.1px;
+    width: 685px;
+    text-align: center;
+}
+
+.or {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28.8px
+}
+
+.explore {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28.8px;
+    text-decoration: underline;
+}
+
+.textContent {
+    /* background-color: aquamarine; */
+    display: flex;
+    flex-direction: column;
+    gap: 31px;
+    border-bottom: 1px solid #FFDB45;
+    padding: 30px 20px;
+}
+
+.pdfNameContainer{
+    display: flex;
+    cursor: pointer;
+}
+
+.icon {
+    width: 32px;
+    height: 32px;
+}
+
+.chevron, .pause {
+    width: 24px;
+    height: 24px;
+}
+
+.iconName {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    align-self: center;
+}
+
+.pauseBtn {
+    background-color: #67C972;
+    width: 100px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    height: 40px;
+    align-items: center;
+    gap: 8px
+}
+
+.pauseText { 
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 21.6px;
+}
+
+.textContainer {
+    width: 100%;
+    min-height: 602px;
+}
+
+.imageTextCotainer {
+    padding: 30px 20px;
+}
+
+.imageText {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 84px;
+}
+
+p {
+    /* background-color: red; */
+    margin: 0;
+}

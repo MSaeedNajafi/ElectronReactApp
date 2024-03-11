@@ -14,6 +14,7 @@ import Ally from './pages/Ally/Ally';
 import Enterprise from './pages/Enterprise/Enterprise';
 import Community from './pages/Community/Community';
 import Support from './pages/Support/Support';
+import Webtool from './pages/Webtool/Webtool';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -31,7 +32,7 @@ root.render(
           <Route path="/enterprise" element={<Enterprise />} />
           <Route path="/community" element={<Community />} />
           <Route path="/support" element={<Support />} />
-          <Route path="/webtool" element={<UploadFile />} />
+          <Route path="/webtool" element={<Webtool />} />
           <Route path="/login" element={<Login />} />
         </Route>
       </Routes>

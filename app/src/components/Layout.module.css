@@ -21,6 +21,10 @@
     top: 20px;
 }
 
+.icon {
+  fill: #000000;
+}
+
 .navBar {
     background-color: black;
     display: flex; 

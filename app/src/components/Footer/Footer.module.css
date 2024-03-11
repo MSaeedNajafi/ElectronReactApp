@@ -26,9 +26,18 @@
     /* font-family: "GTwalsheimMedium"; */
 }
 
+.socialIcons {
+    width: 20px;
+    height: 20px;
+}
+
+.socialIconsContainer {
+    display: flex;
+    gap: 10px;
+}
+
 dt {
     padding: 5px 0;
-    /* font-family: "GTwalsheimMedium"; */
 }
 
 dd {

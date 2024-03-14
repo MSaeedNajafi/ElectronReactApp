@@ -116,7 +116,63 @@
     line-height: 84px;
 }
 
+.controlsContainer {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.controlText, .controlBtnText {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21.6px;
+}
+
+.currentPageStyle {
+    width: 52px;
+    height: 36px;
+    border-radius: 5px;
+    border: 1px solid #FDC9C4;
+    font-size: 18px;
+    text-align: center;
+}
+
+.vector {
+    width: 24px;
+    height: 24px;
+}
+
+.vectorRight {
+    width: 24px;
+    height: 24px;
+    transform: rotate(180deg);
+}
+
+.controlBtn {
+    /* width: 161px; */
+    border-radius: 5px;
+    border: 1px solid #FDC9C4;
+    padding: 8px;
+    display: flex;
+    gap: 8px;
+    background-color: #FFF;
+    align-items: center;
+}
+
+.controlBtnContainer{
+    display: flex;
+    gap: 8px;
+}
+
+.showControls {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
 p {
     /* background-color: red; */
     margin: 0;
 }
+
+

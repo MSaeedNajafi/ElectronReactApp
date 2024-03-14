@@ -1,0 +1,32 @@
+.controlsContainer {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.icon {
+    width: 18px;
+    height: 18px;
+}
+
+.icontranslate {
+    width: 24px;
+    height: 24px;
+}
+
+.chevron {
+    width: 16px;
+    height: 16px;
+}
+
+.text {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21.6px;
+}
+
+.frame{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}

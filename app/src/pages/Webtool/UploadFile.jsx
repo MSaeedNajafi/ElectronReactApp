@@ -4,10 +4,11 @@ import styles from "./Webtool.module.css";
 import FileIcon from "../../assets/icons/FileText.png";
 import Chevron from "../../assets/icons/chevron.png";
 import Pause from "../../assets/icons/Pause.png";
-import Vector from "../../assets/icons/Vector.png";
 import pdfToImg from "../../helper/convertPdfToImages ";
 import Controls from "../../components/Controls/Controls";
 import UploadHere from "../../components/UploadHere/UploadHere";
+import PageInterActions from "../../components/PageInterActions/PageInterActions";
+import Loading from "../../components/Loading/Loading";
 
 const UploadFile = () => {
   const [show, setShow] = useState(false);
@@ -71,7 +72,13 @@ const UploadFile = () => {
     return (
       <div className={styles.showControls}>
         <Controls />
-        <PageInterActions />
+        <PageInterActions
+          pageNumber={pageNumber}
+          setPageNumbe={setPageNumber}
+          numberOfPages={numberOfPages}
+          prevPage={prevPage}
+          nextPage={nextPage}
+        />
       </div>
     );
   };
@@ -88,39 +95,10 @@ const UploadFile = () => {
     }
   };
 
-  const PageInterActions = () => {
-    return (
-      <div className={styles.controlsContainer}>
-        <p className={styles.controlText}>Page</p>
-        <input
-          type="text"
-          id="currentPage"
-          name="currentPage"
-          className={styles.currentPageStyle}
-          value={pageNumber}
-          onChange={(e) => setPageNumber(e.target.value)}
-        />
-        <p className={styles.controlText}>of {numberOfPages}</p>
-        <div className={styles.controlBtnContainer}>
-          <button className={styles.controlBtn} onClick={prevPage}>
-            <img src={Vector} alt="" className={styles.vector} />
-            <p className={styles.controlBtnText}>Previous page</p>
-          </button>
-          <button className={styles.controlBtn} onClick={nextPage}>
-            <p className={styles.controlBtnText}>Next page</p>
-            <img src={Vector} alt="" className={styles.vectorRight} />
-          </button>
-        </div>
-      </div>
-    );
-  };
-
   return (
     <div className={styles.textContainer}>
       {loading ? (
-        <div className={styles.loadingContainer}>
-          <p className={styles.iconName}>Loading....</p>
-        </div>
+        <Loading />
       ) : (
         <>
           {texts.length > 0 ? (

@@ -1,0 +1,13 @@
+.loadingContainer {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    min-height: 602px;
+}
+
+.loading {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    align-self: center;
+}

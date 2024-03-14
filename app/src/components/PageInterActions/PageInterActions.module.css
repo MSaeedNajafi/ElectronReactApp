@@ -1,0 +1,47 @@
+.controlsContainer {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.controlText, .controlBtnText {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21.6px;
+}
+
+.currentPageStyle {
+    width: 52px;
+    height: 36px;
+    border-radius: 5px;
+    border: 1px solid #FDC9C4;
+    font-size: 18px;
+    text-align: center;
+}
+
+.controlBtnContainer{
+    display: flex;
+    gap: 8px;
+}
+
+.controlBtn {
+    /* width: 161px; */
+    border-radius: 5px;
+    border: 1px solid #FDC9C4;
+    padding: 8px;
+    display: flex;
+    gap: 8px;
+    background-color: #FFF;
+    align-items: center;
+}
+
+.vector {
+    width: 24px;
+    height: 24px;
+}
+
+.vectorRight {
+    width: 24px;
+    height: 24px;
+    transform: rotate(180deg);
+}

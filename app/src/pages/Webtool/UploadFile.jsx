@@ -11,19 +11,27 @@ import Controls from "../../components/Controls/Controls";
 const UploadFile = () => {
   const [show, setShow] = useState(false);
   const [image, setImage] = useState(null);
-  const [text, setText] = useState(null);
   const [fileName, setFileName] = useState("");
-  const [processingPdf, setProcessingPdf] = useState(false);
+  const [loading, setLoading] = useState(false);
   const [numberOfPages, setNumberOfPages] = useState(0);
   const [pageNumber, setPageNumber] = useState(0);
+  const [texts, setTexts] = useState([]);
 
   const handlePdfFileChange = async (e) => {
     const file = e.target.files[0];
     setFileName(file.name);
-    if (file.type === "application/pdf") {
-      performPdfOCR(file);
+    if (
+      file.type === "image/png" ||
+      file.type === "image/jpeg" ||
+      file.type === "application/pdf"
+    ) {
+      if (file.type === "application/pdf") {
+        performPdfOCR(file);
+      } else {
+        performImageOCR(file);
+      }
     } else {
-      performImageOCR(file);
+      alert("File type not accepted!");
     }
   };
 
@@ -31,32 +39,30 @@ const UploadFile = () => {
     const pages = await pdfToImg(file);
     setNumberOfPages(pages.length);
     setPageNumber(1);
-    let allText = "";
-    setProcessingPdf(true);
+    setLoading(true);
     for (let i = 0; i < pages.length; i++) {
       const img = pages[i];
       await setImage(img);
       const text = await performOCR(img);
-      allText += text + "\n";
+      texts[i] = text;
     }
-    setText(allText);
-    setProcessingPdf(false);
+    setLoading(false);
   };
 
   const performImageOCR = async (img) => {
     setNumberOfPages(1);
     setPageNumber(1);
     setImage(img);
+    setLoading(true);
     const text = await performOCR(img);
-    setText(text);
+    setLoading(false);
+    texts[0] = text;
   };
 
   const performOCR = async (img) => {
     const {
       data: { text },
-    } = await Tesseract.recognize(img, "eng", {
-      logger: (m) => console.log(m),
-    });
+    } = await Tesseract.recognize(img, "eng");
     return text;
   };
 
@@ -67,7 +73,7 @@ const UploadFile = () => {
         <PageInterActions />
       </div>
     );
-  }
+  };
 
   const nextPage = () => {
     if (pageNumber < numberOfPages) {
@@ -110,13 +116,13 @@ const UploadFile = () => {
 
   return (
     <div className={styles.textContainer}>
-      {processingPdf ? (
-        <div className={styles.pdfNameContainer}>
+      {loading ? (
+        <div className={styles.loadingContainer}>
           <p className={styles.iconName}>Loading....</p>
         </div>
       ) : (
         <>
-          {text === "" || text ? (
+          {texts.length > 0 ? (
             <div>
               <div className={styles.textContent}>
                 <div className={styles.pdfNameContainer}>
@@ -137,7 +143,7 @@ const UploadFile = () => {
                 </div>
               </div>
               <div className={styles.imageTextCotainer}>
-                <p className={styles.imageText}> {text} </p>
+                <p className={styles.imageText}> {texts[pageNumber - 1]} </p>
               </div>
             </div>
           ) : (

@@ -170,8 +170,14 @@
     gap: 30px;
 }
 
+.loadingContainer {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    min-height: 602px;
+}
+
 p {
-    /* background-color: red; */
     margin: 0;
 }
 

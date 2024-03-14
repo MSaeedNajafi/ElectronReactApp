@@ -5,6 +5,8 @@ import Clock from "../../assets/icons/ClockCounterClockwise.png";
 import Gear from "../../assets/icons/Gear.png";
 import Eye from "../../assets/icons/Eyeglasses.png";
 import UploadFile from "../../pages/Webtool/UploadFile";
+import History from "../History/History";
+import Setting from "../Setting/Setting";
 
 const Tabs = () => {
   //   const tabs = ["Envision it", "History", "Glasses", "User settings"];
@@ -15,17 +17,13 @@ const Tabs = () => {
       icon: EnvisionIcon,
       component: <UploadFile />,
     },
-    { id: 1, name: "History", icon: Clock, component: <>History</> },
+    { id: 1, name: "History", icon: Clock, component: <History /> },
     { id: 2, name: "Glasses", icon: Eye, component: <>Glasses</> },
     {
       id: 3,
       name: "User settings",
       icon: Gear,
-      component: (
-        <>
-          <button>User settings</button>
-        </>
-      ),
+      component: <Setting />,
     },
   ];
   const [active, setActive] = useState(tabs[0].id);
